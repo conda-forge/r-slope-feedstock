@@ -12,7 +12,7 @@ source:
   sha256: 5dac8184e1a2f94cd0a956685daf8d6a322776fcaf2019397e2103e3186c2481
 
 build:
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -35,6 +35,11 @@ requirements:
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
+    - r-bh                         # [build_platform != target_platform]
+    - r-bigmemory                  # [build_platform != target_platform]
+    - r-matrix                     # [build_platform != target_platform]
+    - r-rcpp                       # [build_platform != target_platform]
+    - r-rcppeigen                  # [build_platform != target_platform]
   host:
     - r-base
     - libgomp                      # [not osx]
