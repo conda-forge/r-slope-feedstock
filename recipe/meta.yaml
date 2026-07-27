@@ -35,6 +35,11 @@ requirements:
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
+    - r-bh                         # [build_platform != target_platform]
+    - r-bigmemory                  # [build_platform != target_platform]
+    - r-matrix                     # [build_platform != target_platform]
+    - r-rcpp                       # [build_platform != target_platform]
+    - r-rcppeigen                  # [build_platform != target_platform]
   host:
     - r-base
     - libgomp                      # [not osx]
