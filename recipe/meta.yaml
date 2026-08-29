@@ -1,4 +1,4 @@
-{% set version = "2.1.0" %}
+{% set version = "2.1.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/SLOPE_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/SLOPE/SLOPE_{{ version }}.tar.gz
-  sha256: 5dac8184e1a2f94cd0a956685daf8d6a322776fcaf2019397e2103e3186c2481
+  sha256: a544b6ac7f32a64968c95eb5ac0c6f64d8a984be715370a604ac9c38cd5ad133
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -67,10 +67,7 @@ about:
   license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
   summary: Sorted L-One Penalized Estimation
   description: >
-    Efficient implementations for Sorted L-One Penalized Estimation (SLOPE):
-    generalized linear models regularized with the sorted L1-norm. There is
-    support for ordinary least-squares, binomial, multinomial, and Poisson
-    regression.
+    Efficient implementations for Sorted L-One Penalized Estimation (SLOPE): generalized linear models regularized with the sorted L1-norm. There is support for ordinary least-squares, binomial, multinomial, and Poisson regression.
 
 extra:
   recipe-maintainers:
