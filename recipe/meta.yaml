@@ -1,4 +1,4 @@
-{% set version = "2.1.1" %}
+{% set version = "2.2.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/SLOPE_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/SLOPE/SLOPE_{{ version }}.tar.gz
-  sha256: a544b6ac7f32a64968c95eb5ac0c6f64d8a984be715370a604ac9c38cd5ad133
+  sha256: 85205b949a9e61c5154425e2b6149b436ec08c5917cc4987726b214594edf635
 
 build:
   number: 0
